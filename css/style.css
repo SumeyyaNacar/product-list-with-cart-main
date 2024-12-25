@@ -1,4 +1,3 @@
-@charset "UTF-8";
 @font-face {
   font-family: specimen-italic;
   src: url(/assets/fonts/RedHatText-Italic-VariableFont_wght.ttf);
@@ -32,27 +31,31 @@
   transition: background-color 0.5s, color 0.5s;
   padding: 4rem;
 }
-* body h2 {
+* body section {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 3rem;
+  padding: 3rem;
+}
+* body section .container {
+  flex: 3;
+}
+* body section .container h2 {
   margin-block: 2rem;
   font-size: 1.8rem;
 }
-* body .container {
-  display: grid;
-  grid-template-columns: 3fr 1fr;
-  gap: 3rem;
-}
-* body .container .products {
+* body section .container .products {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
   flex-wrap: wrap;
 }
-* body .container .products .product {
+* body section .container .products .product {
   text-align: start;
   background-color: var(--rose-100);
   position: relative;
 }
-* body .container .products .product img {
+* body section .container .products .product img {
   width: 100%;
   height: auto;
   border-radius: 20px;
@@ -61,19 +64,19 @@
   -ms-border-radius: 20px;
   -o-border-radius: 20px;
 }
-* body .container .products .product h5 {
-  margin-block: 0.5rem;
+* body section .container .products .product h5 {
+  margin-top: 2rem;
   font-size: 0.7rem;
   color: var(--rose-300);
 }
-* body .container .products .product h3 {
+* body section .container .products .product h3 {
   margin-block: 0.5rem;
   font-size: 1rem;
   color: var(--rose-900);
 }
-* body .container .products .product button {
+* body section .container .products .product button {
   position: absolute;
-  top: 80%;
+  top: 75%;
   left: 50%;
   transform: translate(-50%, -50%);
   padding: 0.75rem 1.25rem;
@@ -83,20 +86,43 @@
   font-weight: 500;
   border-radius: 40px;
 }
-* body .container .products .product button img {
+* body section .container .products .product button img {
   width: 20px;
   height: 20px;
   line-height: 25px;
 }
-* body .container .products .product p {
+* body section .container .products .product p {
   margin-block: 0.5rem;
   font-size: 1rem;
   font-weight: 900;
   color: var(--red);
 }
-* body .container .cart {
-  border: 1px solid #ccc; /* Sepet kutusu stili */
-  padding: 1rem; /* İçerik çevresinde boşluk */
-  background-color: #fff; /* Arka plan rengi */
-  text-align: center; /* Yazıyı ortala */
+* body section .cart {
+  flex: 1;
+  align-self: flex-start;
+  background-color: white;
+  height: auto;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  padding: 1rem;
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+}
+* body section .cart h2 {
+  font-size: 1.5rem;
+  text-align: start;
+  color: var(--red);
+  margin: 1rem 0.8rem;
+}
+* body section .cart img {
+  margin: 2rem;
+}
+* body section .cart p {
+  margin-bottom: 2rem;
+  font-size: 1rem;
+  color: var(--rose-500);
+  font-weight: 900;
 }/*# sourceMappingURL=style.css.map */

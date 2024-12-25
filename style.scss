@@ -34,81 +34,106 @@
     transition: background-color 0.5s, color 0.5s;
     padding: 4rem;
 
-    h2 {
-      margin-block: 2rem;
-      font-size: 1.8rem;
-    }
-    .container {
-      display: grid;
-      grid-template-columns: 3fr 1fr;
+    section {
+      display: flex;
+      justify-content: space-evenly;
       gap: 3rem;
-    
+      padding: 3rem;
 
-      .products {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 2rem;
-        flex-wrap: wrap;
+      .container {
+        flex: 3;
 
-        .product {  
-        
-          text-align: start;
-          background-color:var(--rose-100);
-          position: relative;
-          img {
-            width: 100%;
-            height: auto;
-            border-radius: 20px;
-            -webkit-border-radius: 20px;
-            -moz-border-radius: 20px;
-            -ms-border-radius: 20px;
-            -o-border-radius: 20px;
-}
-          h5 {
-            margin-block: 0.5rem;
-            font-size: 0.7rem;
-            color: var(--rose-300);
-          }
-          h3 {
-            margin-block: 0.5rem;
-            font-size: 1rem;
-            color: var(--rose-900);
-          }
+        h2 {
+          margin-block: 2rem;
+          font-size: 1.8rem;
+        }
 
-          button {
-            position: absolute;
-            top: 80%; 
-            left: 50%; 
-            transform: translate(
-              -50%,
-              -50%
-            ); 
-            padding: 0.75rem 1.25rem;
+        .products {
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          gap: 2rem;
+          flex-wrap: wrap;
+
+          .product {
+            text-align: start;
             background-color: var(--rose-100);
-            border: 1px solid var(--rose-300);
-            color: var(--rose-400);
-            font-weight: 500;
-            border-radius: 40px;
+            position: relative;
             img {
-              width: 20px;
-              height: 20px;
-              line-height: 25px;
-            
+              width: 100%;
+              height: auto;
+              border-radius: 20px;
+              -webkit-border-radius: 20px;
+              -moz-border-radius: 20px;
+              -ms-border-radius: 20px;
+              -o-border-radius: 20px;
             }
-          }
-          p{
-            margin-block: 0.5rem;
-            font-size: 1rem;
-            font-weight: 900;
-            color: var(--red);
+            h5 {
+              margin-top: 2rem;
+              font-size: 0.7rem;
+              color: var(--rose-300);
+            }
+            h3 {
+              margin-block: .5rem;
+              font-size: 1rem;
+              color: var(--rose-900);
+            }
+
+            button {
+              position: absolute;
+              top: 75%;
+              left: 50%;
+              transform: translate(-50%, -50%);
+              padding: 0.75rem 1.25rem;
+              background-color: var(--rose-100);
+              border: 1px solid var(--rose-300);
+              color: var(--rose-400);
+              font-weight: 500;
+              border-radius: 40px;
+              img {
+                width: 20px;
+                height: 20px;
+                line-height: 25px;
+              }
+            }
+            p {
+              margin-block: 0.5rem;
+              font-size: 1rem;
+              font-weight: 900;
+              color: var(--red);
+            }
           }
         }
       }
       .cart {
-        border: 1px solid #ccc; /* Sepet kutusu stili */
-        padding: 1rem; /* İçerik çevresinde boşluk */
-        background-color: #fff; /* Arka plan rengi */
-        text-align: center; /* Yazıyı ortala */
+        flex: 1;
+        align-self: flex-start;
+        background-color: white;
+        height: auto;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+        text-align: center;
+        padding: 1rem;
+        border-radius: 20px;
+        -webkit-border-radius: 20px;
+        -moz-border-radius: 20px;
+        -ms-border-radius: 20px;
+        -o-border-radius: 20px;
+
+        h2{
+          font-size: 1.5rem;
+          text-align: start;
+          color: var(--red);
+          margin: 1rem .8rem;
+        }
+        img{
+          margin: 2rem;
+        }
+        p{
+          margin-bottom:2rem ;
+          font-size: 1rem;
+          color: var(--rose-500);
+          font-weight: 900;
+        }
+
       }
     }
   }
